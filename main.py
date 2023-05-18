@@ -5,13 +5,19 @@ from tkinter import messagebox
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 def save_password():
-    data = f"{website_input.get()} | {id_input.get()} | {password_input.get()}\n"
-    with open("data.txt", "a") as dataFile:
-        dataFile.writelines(data)
-    website_input.delete(0,END)
-    id_input.insert(0, "@gmail.com")
-    password_input.delete(0, END)
-    website_input.focus_set()
+    website = website_input.get()
+    email = id_input.get()
+    password = password_input.get()
+    data = f"{website} | {email} | {password}\n"
+
+    is_true = messagebox.askokcancel(title=website, message=f"These are the details entered: \nEmail:{email}\nPassword:{password}")
+    if is_true:
+        with open("data.txt", "a") as dataFile:
+            dataFile.writelines(data)
+        website_input.delete(0,END)
+        id_input.insert(0, "@gmail.com")
+        password_input.delete(0, END)
+        website_input.focus_set()
 
 
 # ---------------------------- UI SETUP ------------------------------- #
