@@ -27,4 +27,7 @@ password_label.grid(column=0, row=3)
 website_input = Entry(width=35)
 website_input.grid(column=1, row=1, columnspan=2)
 
+id_input = Entry(width=35)
+id_input.grid(column=1, row=2, columnspan=2)
+
 window.mainloop()
