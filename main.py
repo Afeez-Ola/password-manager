@@ -35,6 +35,7 @@ id_input.grid(column=1, row=2, columnspan=2)
 password_input = Entry(width=21)
 password_input.grid(column=1, row=3, )
 
+# The Button UI
 generate_button = Button(text="Generate Password", justify="left", width=14)
 generate_button.grid(column=2, row=3)
 
