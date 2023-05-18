@@ -8,6 +8,10 @@ def save_password():
     data = f"website | {website_input.get()} | email| {id_input.get()} | password | {password_input.get()}\n"
     with open("data.txt", "a") as dataFile:
         dataFile.writelines(data)
+    website_input.delete(0,END)
+    id_input.delete(0, END)
+    password_input.delete(0, END)
+    website_input.focus_set()
 
 
 # ---------------------------- UI SETUP ------------------------------- #
