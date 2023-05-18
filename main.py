@@ -1,11 +1,11 @@
 from tkinter import *
-
+from tkinter import messagebox
 
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 def save_password():
-    data = f"website | {website_input.get()} | email| {id_input.get()} | password | {password_input.get()}\n"
+    data = f"{website_input.get()} | {id_input.get()} | {password_input.get()}\n"
     with open("data.txt", "a") as dataFile:
         dataFile.writelines(data)
     website_input.delete(0,END)
