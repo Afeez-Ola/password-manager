@@ -5,9 +5,9 @@ from tkinter import *
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 def save_password():
-    data = (f"website | {website_input.get()} | email| {id_input.get()} | password | {password_input.get()}")
-    with open("data.txt", "w") as dataFile:
-        dataFile.write(data)
+    data = f"website | {website_input.get()} | email| {id_input.get()} | password | {password_input.get()}\n"
+    with open("data.txt", "a") as dataFile:
+        dataFile.writelines(data)
 
 
 # ---------------------------- UI SETUP ------------------------------- #
