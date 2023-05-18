@@ -9,7 +9,7 @@ def save_password():
     with open("data.txt", "a") as dataFile:
         dataFile.writelines(data)
     website_input.delete(0,END)
-    id_input.delete(0, END)
+    id_input.insert(0, "@gmail.com")
     password_input.delete(0, END)
     website_input.focus_set()
 
