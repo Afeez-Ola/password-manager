@@ -31,6 +31,7 @@ website_input.focus_set()
 website_input.grid(column=1, row=1, columnspan=2)
 
 id_input = Entry(width=35)
+id_input.insert(0, "123@gmail.com")
 id_input.grid(column=1, row=2, columnspan=2)
 
 password_input = Entry(width=35)
@@ -40,7 +41,7 @@ password_input.grid(column=1, row=3, columnspan=2)
 generate_button = Button(text="Generate Password", )
 generate_button.grid(column=2, row=3)
 
-add_button = Button(text="Add", width=36,justify="center")
-add_button.grid(column=1, row=4, columnspan=3, pady=12,)
+add_button = Button(text="Add", width=36, justify="center")
+add_button.grid(column=1, row=4, columnspan=3, pady=12, )
 
 window.mainloop()
