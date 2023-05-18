@@ -21,4 +21,7 @@ website_label.grid(column=0,row=1)
 id_label = Label(text="Email/Username:",font=("Arial", 12),padx=12,pady=12,)
 id_label.grid(column=0,row=2)
 
+password_label = Label(text="Password:",font=("Arial", 12),padx=12)
+password_label.grid(column=0,row=3)
+
 window.mainloop()
