@@ -30,4 +30,7 @@ website_input.grid(column=1, row=1, columnspan=2)
 id_input = Entry(width=35)
 id_input.grid(column=1, row=2, columnspan=2)
 
+password_input = Entry(width=35)
+password_input.grid(column=1, row=3, columnspan=2)
+
 window.mainloop()
