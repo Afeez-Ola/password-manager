@@ -27,6 +27,7 @@ password_label.grid(column=0, row=3)
 
 # The input UI
 website_input = Entry(width=35)
+website_input.focus_set()
 website_input.grid(column=1, row=1, columnspan=2)
 
 id_input = Entry(width=35)
