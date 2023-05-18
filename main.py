@@ -15,6 +15,7 @@ image = PhotoImage(file="logo.png")
 canvas.create_image(100, 100, image=image)
 canvas.grid(column=1, row=0, padx=50, pady=50)
 
+# The Label UI
 website_label = Label(text="Website:", font=("Arial", 12), )
 website_label.grid(column=0, row=1)
 
@@ -24,6 +25,7 @@ id_label.grid(column=0, row=2)
 password_label = Label(text="Password:", font=("Arial", 12), padx=12, )
 password_label.grid(column=0, row=3)
 
+# The input UI
 website_input = Entry(width=35)
 website_input.grid(column=1, row=1, columnspan=2)
 
