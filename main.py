@@ -13,6 +13,9 @@ window.config(padx=50,pady=50)
 canvas = Canvas(width=200, height=200)
 image = PhotoImage(file="logo.png")
 canvas.create_image(100, 100, image=image)
-canvas.grid(column=1, row=1, padx=50, pady=50)
+canvas.grid(column=1, row=0, padx=50, pady=50)
+
+website_label = Label(text="Website:",font=("Arial", 18,'bold'))
+website_label.grid(column=0,row=1)
 
 window.mainloop()
