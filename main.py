@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox
-from random import choice, randint
+from random import *
 import pyperclip
 import string
 
