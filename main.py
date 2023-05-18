@@ -14,9 +14,8 @@ password_list = password_numbers + password_symbols + password_letters
 
 shuffle(password_list)
 
-password = ""
-for char in password_list:
-  password += char
+password = "".join(password_list)
+
 
 print(f"Your password is: {password}")
 # ---------------------------- SAVE PASSWORD ------------------------------- #
