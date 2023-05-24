@@ -8,15 +8,16 @@ import json
 
 # ---------------------------- SEARCH PASSWORD ------------------------------- #
 def search_password():
+    website = website_input.get()
     try:
         with open("data.json", "r") as dataFile:
             data = json.load(dataFile)
             keys = list(data.keys())
             for key in keys:
-                if website_input.get() in key:
-                    messagebox.showinfo(title=f"{website_input.get()} data", message=f"Email: {data[key]['email']}\nPassword:{data[key]['password']} ")
+                if website in key:
+                    messagebox.showinfo(title=f"{website} data", message=f"Email: {data[key]['email']}\nPassword:{data[key]['password']} ")
                 else:
-                    messagebox.showerror(title="Error", message=f"There's no data for {website_input.get()}")
+                    messagebox.showerror(title="Error", message=f"There's no data for {website}")
     except FileNotFoundError:
         print("File not found!")
 
