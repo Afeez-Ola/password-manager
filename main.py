@@ -52,11 +52,12 @@ def save_password():
             data.update(new_data)
             with open("data.json", "w") as dataFile:
                 json.dump(data, dataFile, indent=4)
-        website_input.delete(0, tk.END)
-        id_input.delete(0, tk.END)
-        id_input.insert(0, "@gmail.com")
-        password_input.delete(0, tk.END)
-        website_input.focus_set()
+        finally:
+            website_input.delete(0, tk.END)
+            id_input.delete(0, tk.END)
+            id_input.insert(0, "@gmail.com")
+            password_input.delete(0, tk.END)
+            website_input.focus_set()
 
 
 # ---------------------------- UI SETUP ------------------------------- #
