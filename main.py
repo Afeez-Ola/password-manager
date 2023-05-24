@@ -116,6 +116,6 @@ generate_button = tk.Button(text="Generate Password",width=13, command=generate_
 generate_button.grid(column=3, row=3,padx=7)
 
 add_button = tk.Button(text="Add", width=39, justify="center", command=save_password)
-add_button.grid(column=1, row=4, columnspan=3,pady=12 )
+add_button.grid(column=1, row=4, columnspan=2,pady=12 )
 
 window.mainloop()
