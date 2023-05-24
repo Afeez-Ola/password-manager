@@ -6,6 +6,21 @@ import string
 import json
 
 
+# ---------------------------- SEARCH PASSWORD ------------------------------- #
+def search_password():
+    try:
+        with open("data.json", "r") as dataFile:
+            data = json.load(dataFile)
+            keys = list(data.keys())
+            for key in keys:
+                if website_input.get() in key:
+                    messagebox.showinfo(title=f"{website_input.get()} data", message=f"Email: {data[key]['email']}\nPassword:{data[key]['password']} ")
+                else:
+                    messagebox.showerror(title="Error", message=f"There's no data for {website_input.get()}")
+    except FileNotFoundError:
+        print("File not found!")
+
+
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 def generate_password():
     letters = string.ascii_letters
@@ -94,7 +109,7 @@ password_input = tk.Entry(width=35)
 password_input.grid(column=1, row=3, columnspan=2)
 
 # The Button UI
-search_button = tk.Button(text="Search", )
+search_button = tk.Button(text="Search", command=search_password)
 search_button.grid(column=3, row=1)
 
 generate_button = tk.Button(text="Generate Password", command=generate_password)
