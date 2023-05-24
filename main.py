@@ -109,13 +109,13 @@ password_input = tk.Entry(width=35)
 password_input.grid(column=1, row=3, columnspan=2)
 
 # The Button UI
-search_button = tk.Button(text="Search", command=search_password)
-search_button.grid(column=3, row=1)
+search_button = tk.Button(text="Search", width=13,command=search_password)
+search_button.grid(column=3, row=1,padx=7)
 
-generate_button = tk.Button(text="Generate Password", command=generate_password)
-generate_button.grid(column=2, row=3)
+generate_button = tk.Button(text="Generate Password",width=13, command=generate_password)
+generate_button.grid(column=3, row=3,padx=7)
 
-add_button = tk.Button(text="Add", width=36, justify="center", command=save_password)
-add_button.grid(column=1, row=4, columnspan=3, pady=12)
+add_button = tk.Button(text="Add", width=39, justify="center", command=save_password)
+add_button.grid(column=1, row=4, columnspan=3,pady=12 )
 
 window.mainloop()
