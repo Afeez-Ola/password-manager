@@ -42,8 +42,11 @@ def save_password():
     if len(website) == 0 or len(password) == 0 or len(email) == 0:
         messagebox.showerror(title="Oops", message=f"Please don't leave any fields empty!")
     else:
+        with open("data.json", "r") as dataFile:
+            data = json.load(dataFile)
+            data.update(new_data)
         with open("data.json", "w") as dataFile:
-            json.dump(new_data,dataFile,indent=4)
+            json.dump(data, dataFile, indent=4)
         website_input.delete(0, tk.END)
         id_input.delete(0, tk.END)
         id_input.insert(0, "@gmail.com")
