@@ -44,10 +44,14 @@ def save_password():
         try:
             with open("data.json", "r") as dataFile:
                 data = json.load(dataFile)
-                data.update(new_data)
+
         except FileNotFoundError:
             with open("data.json", "w") as dataFile:
                 json.dump(new_data, dataFile, indent=4)
+        else:
+            data.update(new_data)
+            with open("data.json", "w") as dataFile:
+                json.dump(data, dataFile, indent=4)
         website_input.delete(0, tk.END)
         id_input.delete(0, tk.END)
         id_input.insert(0, "@gmail.com")
