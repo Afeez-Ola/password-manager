@@ -94,6 +94,9 @@ password_input = tk.Entry(width=35)
 password_input.grid(column=1, row=3, columnspan=2)
 
 # The Button UI
+search_button = tk.Button(text="Search", )
+search_button.grid(column=3, row=1)
+
 generate_button = tk.Button(text="Generate Password", command=generate_password)
 generate_button.grid(column=2, row=3)
 
